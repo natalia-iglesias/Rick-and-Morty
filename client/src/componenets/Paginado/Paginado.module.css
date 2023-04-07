@@ -1,0 +1,28 @@
+.contenedor {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.li {
+  display: inline;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+.btn {
+  color: red;
+
+  font-size: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: rgba(128, 128, 128, 0.356);
+  background-color: rgb(240, 170, 41);
+  transition: 2ms;
+}
+.btn:focus {
+  background-color: rgba(240, 170, 41, 0.918);
+}

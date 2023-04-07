@@ -2,12 +2,6 @@
 const { DataTypes } = require("sequelize");
 module.exports = function (sequelize) {
   return sequelize.define("Characters", {
-    id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      allowNull: false,
-      primaryKey: true,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,6 +15,9 @@ module.exports = function (sequelize) {
     image: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    episode: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
     },
   });
 };

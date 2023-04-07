@@ -21,13 +21,31 @@ const charactersApi = async () => {
   }
 };
 
-const getDbInfo = async () => {
-  return await Characters.findAll();
+const characterDb = async () => {
+  try {
+    const personaje = await charactersApi();
+
+    personaje.forEach((el) => {
+      const personajes = Characters.findOrCreate({
+        where: {
+          id: el.id,
+          name: el.name,
+          status: el.status,
+          species: el.species,
+          image: el.image,
+          episode: el.episode,
+        },
+      });
+      return personajes;
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const getAllCharacters = async () => {
   const apiInfo = await charactersApi();
-  const dbInfo = await getDbInfo();
+  const dbInfo = await characterDb();
   const infoTotal = apiInfo.concat(dbInfo);
   return infoTotal;
 };

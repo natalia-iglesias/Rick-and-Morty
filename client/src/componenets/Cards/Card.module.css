@@ -1,0 +1,26 @@
+.card {
+  display: inline-flex;
+  justify-self: start;
+  justify-content: space-between;
+  text-align: center;
+  font-family: cursive;
+  color: black;
+  font-size: 20px;
+  margin-top: 25px;
+  width: 200px;
+  height: 254px;
+  padding: 35px;
+}
+.card:hover {
+  margin-top: 15px;
+}
+.h {
+  display: inline-flex;
+  align-items: flex-end;
+
+  color: rgb(240, 58, 58);
+}
+.img {
+  width: 200px;
+  height: 200px;
+}

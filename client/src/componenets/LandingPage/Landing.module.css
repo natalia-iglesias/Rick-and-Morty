@@ -1,0 +1,22 @@
+.bkg {
+  background-image: url("../../imges/rick-and-morty-logo-rojo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+.btn {
+  display: flex;
+  border-radius: 15px;
+  font-family: cursive;
+  font-size: 2rem;
+  border: solid 2px rgba(0, 0, 0, 0.89);
+  background-color: rgba(247, 6, 6, 0.801);
+  transform: background-color 0.25s;
+  cursor: pointer;
+  color: black;
+}
+.btn:hover {
+  background-color: brown;
+}
